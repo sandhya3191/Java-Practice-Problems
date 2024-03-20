@@ -1,0 +1,39 @@
+/*
+LinkedList is implementation class of List.
+The underlying datastructure for linkedlist is DoubleLinkedList.
+It allows Homogeneous elements and Duplicate values and null values also.
+If our frequent operation is add or remove then it is better option to use.
+*/
+
+import java.util.LinkedList;
+class Main {
+    public static void main(String[] args) {
+        LinkedList l=new LinkedList();
+        l.add(1);
+        l.add(4);
+        l.add("sand");
+        System.out.println(l);  // [1, 4, sand]
+        
+        //Adding object 
+        l.addFirst(7);
+        System.out.println(l);  // [7, 1, 4, sand]
+        
+        l.addLast("last");
+        System.out.println(l);  // [7, 1, 4, sand, last]
+        
+        //removing first object
+        l.removeFirst();
+        System.out.println(l); // [1, 4, sand, last]
+        
+        //removing last object
+        l.removeLast();
+        System.out.println(l);  // [1, 4, sand]
+        
+        //Get first element
+        System.out.println(l.getFirst());  // 1
+        
+        //Get last element
+        System.out.println(l.getLast()); // sand
+   
+    }
+}
