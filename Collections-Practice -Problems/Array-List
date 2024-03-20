@@ -1,0 +1,38 @@
+/*
+ArrayList is implementation class of List Interface.
+ArrayList internally use dynamic array for functionality.
+It implements Random access interface which is marker interface .So we can access any random element by using index.
+It allows duplicate and homogeneous and null values.
+It's initial capacity is 10.
+If we add more elements it will automatically increases its size.
+When we perform remove operaion its shift elements to left to fill gaps.
+ArrayList is best choice if our frequent operation is retrieval operation.
+*/
+
+import java.util.ArrayList;
+class HelloWorld {
+    public static void main(String[] args) {
+        ArrayList al=new ArrayList();
+        al.add(1);
+        al.add(4);
+        al.add("sand");
+        System.out.println(al); //[1, 4, sand]
+        
+        //Adding object at specified index
+        al.add(1,7);
+        System.out.println(al);  //[1, 7, 4, sand]
+        
+        //Get an object at specified index
+        System.out.println(al.get(3)); //sandy
+        
+        //Updating value based on index
+        al.set(3,"sandy");
+        System.out.println(al.get(3)); //sandy
+        
+        //Remove anobject at specified index
+        al.remove(0);
+        System.out.println(al); //[7, 4, sandy]
+        
+        
+    }
+}
