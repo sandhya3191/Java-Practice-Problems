@@ -1,0 +1,25 @@
+import java.util.Vector;
+import java.util.Enumeration;
+class Main{
+    public static void main(String[] args) {
+       
+       Vector v = new Vector();
+       v.addElement(3);
+       v.addElement(8);
+       v.addElement(2);
+       v.addElement(1);
+       
+       System.out.println(v); // [3, 8, 2, 1]
+       
+       Enumeration e=v.elements();
+       while(e.hasMoreElements()){
+           Integer i=(Integer)e.nextElement();
+           if(i%2 == 0){
+               System.out.println(i);  // 8 2
+           }
+       }
+       
+       System.out.println(v); // [3, 8, 2, 1]
+       
+    }
+}
