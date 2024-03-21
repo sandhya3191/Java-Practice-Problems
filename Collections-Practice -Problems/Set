@@ -1,0 +1,37 @@
+
+import java.util.Set;
+import java.util.HashSet;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        Set<Integer> set1=new HashSet<Integer>();
+        
+        //Adding elemets to the set 
+        set1.add(3);
+        set1.add(5);
+        set1.add(7);
+        set1.add(9);
+        System.out.println(set1);    // [3, 5, 7, 9]
+        
+        Set<Integer> set2=new HashSet<Integer>();
+        
+        //Adding elemets to the set 
+        set2.add(2);
+        set2.add(4);
+        set2.add(6);
+        set2.add(8);
+        System.out.println(set2);     // [2, 4, 6, 8]
+        
+        //Checking wheather the number is presented in the set or not
+        System.out.println(set1.contains(5)); //true
+        System.out.println(set1.contains(1));  // false
+        
+        //Removing element form set
+        set1.remove(9);
+        System.out.println(set1); //[3, 5, 7]
+        
+        //Using aaddAll() method to append
+        set1.addAll(set2);
+        System.out.println(set1); //[2, 3, 4, 5, 6, 7, 8]
+    }
+}
