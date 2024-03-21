@@ -1,0 +1,38 @@
+import java.util.Set;
+import java.util.HashSet;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        Set<Integer> set1=new HashSet<Integer>();
+        
+        //Adding elemets to the set 
+        set1.add(3);
+        set1.add(6);
+        set1.add(7);
+        set1.add(9);
+        System.out.println(set1); // [3, 6, 7, 9]
+        
+        Set<Integer> set2=new HashSet<Integer>();  
+        
+        //Adding elemets to the set 
+        set2.add(1);
+        set2.add(4);
+        set2.add(6);
+        set2.add(8);
+        System.out.println(set2); // [1, 4, 6, 8]
+        
+       //To find union
+       Set<Integer> union = new HashSet<Integer>(set1);
+       union.addAll(set2);
+       System.out.println(union); // [1, 3, 4, 6, 7, 8, 9]
+       
+       Set<Integer> intersection = new HashSet<Integer>(set1);
+       intersection.retainAll(set2);
+       System.out.println(intersection); // [6]
+       
+        Set<Integer> difference = new HashSet<Integer>(set1);
+        difference.removeAll(set2);
+        System.out.println(difference); // [3, 7, 9]
+       
+    }
+}
