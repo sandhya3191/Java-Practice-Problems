@@ -1,0 +1,37 @@
+import java.util.Set;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.TreeSet;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        Set<Integer> set1=new HashSet<Integer>();
+        
+        //Adding elemets to the set 
+        set1.add(9);
+        set1.add(6);
+        set1.add(7);
+        set1.add(4);
+        System.out.println(set1);  // [4, 6, 7, 9]
+        
+        Set<Integer> set2=new LinkedHashSet<Integer>();
+        
+        //Adding elemets to the set 
+        set2.add(9);
+        set2.add(6);
+        set2.add(7);
+        set2.add(4);
+        System.out.println(set2);  // [9, 6, 7, 4]
+        
+        Set<Integer> set3=new TreeSet<Integer>();
+        
+        //Adding elemets to the set 
+        set3.add(9);
+        set3.add(6);
+        set3.add(7);
+        set3.add(4);
+        System.out.println(set3 // [4, 6, 7, 9]
+        
+       
+    }
+}
