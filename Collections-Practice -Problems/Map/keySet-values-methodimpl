@@ -1,0 +1,57 @@
+import java.util.HashMap;
+import java.util.Collection;
+import java.util.Set;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        //Creating HashMap with default initial capacity 
+        HashMap<String, Integer> map= new HashMap<String, Integer>();
+        
+        //Inserting Key-value pairs to map using put() method
+        map.put("one",1);
+        map.put("two",2);
+        map.put("three",3);
+        map.put("four",4);
+        map.put("five",5);
+        
+        //Checking wheather key 'four' exist in map
+        System.out.println(map.containsKey("four"));
+        System.out.println("-----------");
+        //Checking wheather value '10' exist in map
+        System.out.println(map.containsValue(10));
+        System.out.println("-----------");
+        
+        
+        //Retrieving the key set
+        Set<String> keySet=map.keySet();
+        for(String key:keySet){
+            System.out.println(key);
+        }
+        System.out.println("-----------"); 
+        
+        Collection<Integer> values = map.values();
+         
+        for (Integer value : values) 
+        {
+            System.out.println(value);
+        }
+         
+    }
+}
+output: 
+
+true
+-----------
+false
+-----------
+four
+one
+two
+three
+five
+-----------
+4
+1
+2
+3
+5
