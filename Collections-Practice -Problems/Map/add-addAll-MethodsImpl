@@ -1,0 +1,60 @@
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        //Creating HashMap with default initial capacity 
+        HashMap<String, Integer> map= new HashMap<String, Integer>();
+        
+        //Inserting Key-value pairs to map using put() method
+        map.put("one",1);
+        map.put("two",2);
+        map.put("three",3);
+        map.put("four",4);
+        map.put("five",5);
+        
+        //Printing key-value pairs
+        Set<Entry<String,Integer>> entrySet = map.entrySet();
+        for(Entry<String, Integer> entry: entrySet){
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+
+        System.out.println("--------------------");
+
+        //Creating Nother map
+        HashMap<String, Integer> map1= new HashMap<String, Integer>();
+        map1.put("six",6);
+        map1.put("seven",7);
+        map1.put("eight",8);
+        
+        //Inserting ley-value pairs of map to map using putAll() mehtod
+        map1.putAll(map);
+        
+        //Printing Key-value pairs of map1
+        
+        entrySet = map1.entrySet();
+        for (Entry<String, Integer> entry : entrySet) 
+        {
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+        
+        
+    }
+}
+
+output:
+four : 4
+one : 1
+two : 2
+three : 3
+five : 5
+--------------------
+six : 6
+four : 4
+one : 1
+seven : 7
+two : 2
+three : 3
+five : 5
+eight : 8
