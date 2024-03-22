@@ -1,0 +1,78 @@
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        //Creating HashMap with default initial capacity 
+        HashMap<String, Integer> map= new HashMap<String, Integer>();
+        
+        //Inserting Key-value pairs to map using put() method
+        map.put("one",1);
+        map.put("two",2);
+        map.put("three",3);
+        map.put("four",4);
+        map.put("five",5);
+        
+          
+        System.out.println("HashMap Before Remove :");
+         
+        Set<Entry<String, Integer>> keyValueSet = map.entrySet();
+         
+        for (Entry<String, Integer> entry : keyValueSet) 
+        {
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+         
+        System.out.println("---------------------");
+         
+        //Removing the mapping for the key 'one'
+         
+        map.remove("one");
+         
+        System.out.println("HashMap After Remove :");
+         
+        for (Entry<String, Integer> entry : keyValueSet) 
+        {
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+        
+         System.out.println("------------------");
+         
+        //Removes the mapping for the key 'four'only if it is currently mapped to 4
+         
+        map.remove("four", 4);
+         
+        //Removes the mapping for the key 'five' only if it is currently mapped to 55
+         
+        map.remove("five", 55);
+         
+        System.out.println("HashMap After Remove :");
+         
+        for (Entry<String, Integer> entry : keyValueSet) 
+        {
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+        
+    }
+}
+
+output:
+
+HashMap Before Remove :
+four : 4
+one : 1
+two : 2
+three : 3
+five : 5
+---------------------
+HashMap After Remove :
+four : 4
+two : 2
+three : 3
+five : 5
+------------------
+HashMap After Remove :
+two : 2
+three : 3
+five : 5
