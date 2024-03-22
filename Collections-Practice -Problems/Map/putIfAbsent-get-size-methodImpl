@@ -1,0 +1,50 @@
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        //Creating HashMap with default initial capacity 
+        HashMap<String, Integer> map= new HashMap<String, Integer>();
+        
+        //Inserting Key-value pairs to map using put() method
+        map.put("one",1);
+        map.put("two",2);
+        map.put("three",3);
+        map.put("four",4);
+        map.put("five",5);
+        
+        //Adds key-value par 'two-23' only if it is not present in map
+        map.putIfAbsent("two",23);
+        
+        //Adds key-value par 'nine-9' only if it is not present in map
+        map.putIfAbsent("nine",9);
+        
+        //Printing key-value pairs
+        Set<Entry<String,Integer>> entrySet = map.entrySet();
+        for(Entry<String, Integer> entry: entrySet){
+            System.out.println(entry.getKey()+" : "+entry.getValue());
+        }
+        System.out.println("-----------");
+        
+        //Retrieving a value associated with key 'three'
+        int value= map.get("three");
+        System.out.println("Associated value with three is "+ value);
+        System.out.println("-----------");
+        
+        //Retrieving the number of key-value pairs pressent in map
+        System.out.println("Total key-value pairs in map is: "+map.size());
+         
+    }
+}
+
+nine : 9
+four : 4
+one : 1
+two : 2
+three : 3
+five : 5
+-----------
+Associated value with three is 3
+-----------
+Total key-value pairs in map is: 6
